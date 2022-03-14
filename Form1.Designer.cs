@@ -34,6 +34,9 @@
             this.ordenarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuataMásAltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuotaMásBajasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMasAtlas = new System.Windows.Forms.Button();
+            this.btnMasBajas = new System.Windows.Forms.Button();
+            this.btnAlta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -80,18 +83,56 @@
             this.cuataMásAltasToolStripMenuItem.Name = "cuataMásAltasToolStripMenuItem";
             this.cuataMásAltasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cuataMásAltasToolStripMenuItem.Text = "Cuota más altas";
+            this.cuataMásAltasToolStripMenuItem.Click += new System.EventHandler(this.cuataMásAltasToolStripMenuItem_Click);
             // 
             // cuotaMásBajasToolStripMenuItem
             // 
             this.cuotaMásBajasToolStripMenuItem.Name = "cuotaMásBajasToolStripMenuItem";
             this.cuotaMásBajasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cuotaMásBajasToolStripMenuItem.Text = "Cuota más bajas";
+            this.cuotaMásBajasToolStripMenuItem.Click += new System.EventHandler(this.cuotaMásBajasToolStripMenuItem_Click);
+            // 
+            // btnMasAtlas
+            // 
+            this.btnMasAtlas.Enabled = false;
+            this.btnMasAtlas.Location = new System.Drawing.Point(599, 154);
+            this.btnMasAtlas.Name = "btnMasAtlas";
+            this.btnMasAtlas.Size = new System.Drawing.Size(103, 28);
+            this.btnMasAtlas.TabIndex = 3;
+            this.btnMasAtlas.Text = "Cuotas mas altas";
+            this.btnMasAtlas.UseVisualStyleBackColor = true;
+            this.btnMasAtlas.Click += new System.EventHandler(this.btnMasAtlas_Click);
+            // 
+            // btnMasBajas
+            // 
+            this.btnMasBajas.Enabled = false;
+            this.btnMasBajas.Location = new System.Drawing.Point(599, 219);
+            this.btnMasBajas.Name = "btnMasBajas";
+            this.btnMasBajas.Size = new System.Drawing.Size(103, 27);
+            this.btnMasBajas.TabIndex = 4;
+            this.btnMasBajas.Text = "Cuotas mas bajas";
+            this.btnMasBajas.UseVisualStyleBackColor = true;
+            this.btnMasBajas.Click += new System.EventHandler(this.btnMasBajas_Click);
+            // 
+            // btnAlta
+            // 
+            this.btnAlta.Enabled = false;
+            this.btnAlta.Location = new System.Drawing.Point(599, 279);
+            this.btnAlta.Name = "btnAlta";
+            this.btnAlta.Size = new System.Drawing.Size(103, 24);
+            this.btnAlta.TabIndex = 5;
+            this.btnAlta.Text = "Cuota mas Alta";
+            this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAlta);
+            this.Controls.Add(this.btnMasBajas);
+            this.Controls.Add(this.btnMasAtlas);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
@@ -114,6 +155,9 @@
         private System.Windows.Forms.ToolStripMenuItem ordenarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuataMásAltasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuotaMásBajasToolStripMenuItem;
+        private System.Windows.Forms.Button btnMasBajas;
+        private System.Windows.Forms.Button btnAlta;
+        private System.Windows.Forms.Button btnMasAtlas;
     }
 }
 

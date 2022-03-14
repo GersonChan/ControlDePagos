@@ -28,6 +28,9 @@ namespace ControlDePagos
             leer("propietarios.txt");
             propietarioPropiedad();
             mostrar();
+            btnAlta.Enabled = true;
+            btnMasAtlas.Enabled = true;
+            btnMasBajas.Enabled = true;
         }
 
         private void mostrar()
@@ -81,6 +84,36 @@ namespace ControlDePagos
                     }
                 }
             }
+        }
+
+        private void cuataMásAltasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlCuotas = controlCuotas.OrderByDescending(a => a.cuota).ToList();
+            mostrar();
+        }
+
+        private void cuotaMásBajasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlCuotas = controlCuotas.OrderBy(b => b.cuota).ToList();
+            mostrar();
+        }
+
+        private void btnMasAtlas_Click(object sender, EventArgs e)
+        {
+            controlCuotas = controlCuotas.OrderByDescending(a => a.cuota).ToList();
+            MessageBox.Show(controlCuotas[0].cuota + "\n" + controlCuotas[1].cuota + "\n" + controlCuotas[2].cuota);
+        }
+
+        private void btnMasBajas_Click(object sender, EventArgs e)
+        {
+            controlCuotas = controlCuotas.OrderBy(a => a.cuota).ToList();
+            MessageBox.Show(controlCuotas[0].cuota + "\n" + controlCuotas[1].cuota + "\n" + controlCuotas[2].cuota);
+        }
+
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            controlCuotas = controlCuotas.OrderByDescending(a => a.cuota).ToList();
+            MessageBox.Show(controlCuotas[0].nombre + " " + controlCuotas[0].apellido + " Cuota de: " + controlCuotas[0].cuota);
         }
     }
 }
